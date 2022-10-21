@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Answer of the 12 Marbles Riddle}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Answer}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}The case t1c1}{4}{subsubsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.2}Exercise}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}A Sample Reading Test}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exercises}{4}{subsection.2.1}%
