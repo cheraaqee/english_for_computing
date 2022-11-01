@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+\title{Step into Machine Learning}
+\date{}
+\maketitle
+\section{Predicting the Price of a Property}
+We talked about a city, named ``Birjand". We realized that houses located in the southern areas are more expensive. An efficient way to \textbf{represent} where a property is placed, is to use an \textbf{ordered pair} that represents its $x$ and $y$ \textbf{coordinates}. We considered the south-western corner of the town as the \textbf{origin} of the coordinates. However a better way was to use geographic coordinate system, i.e., its \textbf{latitude} and \textbf{longitude}.
+
+Overall, we \textbf{concluded} that these five \textbf{factors} are \textbf{determinant} of the price of a property:
+\begin{enumerate}
+\item latitude
+\item longitude
+\item age (The number of years that has passed from building the house)
+\item area (\textbf{in} square meters)
+\item type (i.e. house, apartment, or duplex)
+\end{enumerate} 
+It was revealed that a real estate agent is able to accurately \textbf{estimate} the price of a property, if they are given the value of these five \textbf{features}. Four of these features are \textbf{numerical}\footnote{I used the adjective `numeral' in the class, which was {\color{red} wrong} here.}, but the `type' is a ``........... feature". It should be described by a word. However, sicne we're considering a certain set of types, i.e, `house', `apartment', and `duplex', we can \textbf{assign} a number to each of them:
+\begin{tabular}{l|l}
+type&value\\
+\hline
+house&0\\
+apartment&1\\
+duplex&2\\
+\end{tabular}
+
+\noindent Then, we may \textbf{come up} with a \textbf{feature vector} for each house in Birjand:
+\begin{equation}
+\vec{f}_{1\times 5} = [\text{lat}, \text{long}, \text{age (in years)}, \text{area (in } m^2 \text{)}, \text{type (} \in \{0, 1, 2\} \text{)}]
+\label{eq:feactor}
+\end{equation}
+The dimension of feature vectors is $1\times 5$, since we have five features. This \underline{is also equivalent to} saying that ``we have a \emph{five dimensional \textbf{feature space}}".
+
+What we want is a function that maps a feature vector to the price, however, it doesn't seem promising to try to devise an explicit formula for this. The experts (the real estate agents) are also incapable of telling us how they geuss the prices. What we can do, is to \underline{collect labeled data}. This means that we can compute the feature vector for properties that we already know their prices. Doing this for \underline{a sufficient number} of samples, we will have a \textbf{dataset} of feature vectors and their correct prices. Formally, a dataset of $S$ samples, will be of the form: $\{(\vec{f}_1, p_1), (\vec{f}_2, p_2), \ldots, (\vec{f}_S, p_S)\}$, where $p_i$ is the \textbf{ground truth} for samples and $i={1, \ldots, S}$. 
+
+By \underline{plotting the data}, we realized that a \textbf{linear model \underline{can fit them}}. This was our \textbf{hypothesis} for the problem. \underline{Relation (\ref{eq:model}) formulates the} concepts:
+\begin{equation}
+y = \vec{f}\cdot \vec{w}^T + \vec{b}
+\label{eq:model}
+\end{equation}
+Where $\vec{w}$ is the slope of the line, or \textbf{weights}; and $\vec{b}$ resembles the intercept, or off-set. 
+
+This is all good, but we don't know what the correct value for $\vec{w}$ is. \emph{Machine learning} is to program the computer to automatically compute the optimum weights, given the dataset. To have an idea how this may be possible, let's call the predicted value for sample $i$, $y_i$. Also, assume that we begin by \textbf{randomly initialized weights}. So, the error made on sample $i$, is $e_i = (y_i - p_i)^2$. It is obvious that we desire the error be as small as possible. We also want to know how to determine the weights, so that this happens.
+
+The answer is that we consdier the error as a function of weights. If we expand the error's relation, we will get:
+\begin{equation}
+e_i(\vec{w}, \vec{b}) = ((\vec{f}_i\cdot \vec{w}^T +\vec{b})-p_i)^2
+\label{eq:error}
+\end{equation}
+This may not be mathematically rigorous, but now, we can think of error as a function of $\vec{w}$ and $\vec{b}$; then we can find for what value of the independent varaibles, the function will be minimized. Derivation is an option for this \textbf{optimization} task.
+\section{Exercise}
+\begin{enumerate}
+\item Find other usages for the highlighted words and phrases in technical texts.
+\item Find out how to pronounce math expressions like $\int_0^1 f(x).dx$ from Lawrence A Chang's book, \emph{Handbook for Spoken Mathematics}.
+\item Read the first chapter of Tom M. Mitchell's \emph{Machine Learning}, New York, McGraw-hill, 1997. (Ask me if you find anything in it that is hard to understand.)
+\end{enumerate}
+\end{document}
