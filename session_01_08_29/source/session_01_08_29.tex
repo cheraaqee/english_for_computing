@@ -1,0 +1,179 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tikzpeople}
+\usetikzlibrary{shapes.symbols}
+\def\man#1;{%
+    \begin{scope}[shift={#1}, scale = 0.3]
+	    \fill [rounded corners=1.5, gray] (0,0.4) -- (0,0.8) -- (0.4,0.8) -- (0.4,0.4) --
+						(0.325,0.4) -- (0.325,0.7) -- (0.3,0.7) -- (0.3,0) -- (0.225,0) --
+					            (0.225,0.4) -- (0.175,0.4) -- (0.175,0) -- (0.1,0) -- (0.1,0.7) --
+						                (0.075,0.7) -- (0.075,0.4) -- cycle;
+	    \fill[gray] (0.2,0.9) circle (0.1);
+\end{scope}}
+\usepackage{hyperref}
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\usepackage{bidipoem}
+\begin{document}
+\textwidthfootnoterule
+\title{ترجمه کردن سخت است!}
+\author{زبان تخصصی\\گروه مهندسی کامپیوتر\\دانشگاه گیلان}
+\maketitle
+\noindent \textbf{\emph{بنشین بر لب جوی و گذر عمر ببین}}\footnote{\begin{traditionalpoem}بنشین بر لب جوی و گذر عمر ببین&کاین اشارت ز جهان گذران مارا بس\end{traditionalpoem}\begin{flushleft}حافظ\end{flushleft}}
+
+	\noindent \textbf{\emph{آمدی جانم به قربانت، ولی حالا چرا؟}}\footnote{\begin{traditionalpoem}آمدی جانم به قربانت ولی حالا چرا؟&بی‌وفا، حالا که من افتاده‌ام از پا چرا؟\end{traditionalpoem}\begin{flushleft}شهریار\end{flushleft}}
+
+		\noindent \textbf{\emph{در کار خیر حاجت هیچ استخاره نیست}}\footnote{\begin{traditionalpoem}هر دم که دل به عشق دهی خوش دمی بود&در کار خیر حاجت هیچ استخاره نیست\end{traditionalpoem}\begin{flushleft}حافظ\end{flushleft}}
+
+\vskip 1cm
+\noindent چه وقت می‌توانیم بگوییم که این مصرع‌ها را به زبانی دیگر ترجمه کرده‌ایم؟ مفاهیم (و احساسات)ی که این مصرع‌ها منتقل می‌کنند، در بستری کوچک و آهنگین از کلمات تقدیم می‌شوند. استفاده از زبان آن‌قدر به حالت بهینه نزدیک است، که این مصرع‌ها مانند ضرب‌المثل نقل قول می‌شوند. به غیر از بهینگی، درگیر کردن فرهنگ و مفاهیم اجتماعی نیز در محبوب شدن این ساختار‌های زبانی بی‌تأثیر نیستند. آیا ترجمه‌ی این مصرع‌ها به زبان دیگر، می‌تواند همین کارکرد را در زبان مقصد داشته باشد؟ یک مثال، واژه‌ی «\lr{bit}» است. \lr{bit} ترکیبِ «\lr{binary}» و «\lr{digit}» بوده و به معنیِ رقمِ دودویی است. یک رقمِ دودویی، دو حالت داشته و بیشترین مقدار آن یک است. (پس خیلی کوچک است!) از طرفی، معنیِ دیگر \lr{bit}، قلیل بودن و اندک بودنِ چیزی است. به همین علت ترجمه‌ی \lr{bit} به «رقم دودویی»، کارکرد متناظر انگلیسی در فارسی را نخواهد داشت. می‌بینیم که فرهنگستان هم ترجیح داده است که معادل فارسی \lr{bit} همان «بیت» باقی بماند\footnote{پیوند به صفحه‌ی واژه‌های مصوّب: \lr{\href{https://wiki.apll.ir/word/index.php/Bit}{https://wiki.apll.ir/word/index.php/Bit}}}.
+
+موارد مختلفی وجود دارد که نیازمندیم از زبان دیگری برای مقاصد تخصصی استفاده کنیم. متخصصان یک حوزه، معمولاً به یک زبان مشترک با هم ارتباط برقرار می‌کنند و ما برای درک کارهای آن‌ها، یا ارتباط با آن‌ها، نیازمندِ متوجه شدن، یا ابراز کردن به آن زبان خواهیم بود. شکل~\ref{fig:transfer} این انتقال پیام را مدل می‌کند. برای مثال، شاید بیان یک الگوریتم با یک زبان برنامه‌نویسی بسیار قابل فهم‌تر باشد، تا این‌که آن‌را با یک زبان طبیعی (مثل فارسی یا انگلیسی)  توضیح دهیم. هدف نهایی این است که آنچه که در ذهن (یا احساس)ِ ابرازکننده است، در ذهن (یا احساس) ِ درک‌کننده شکل بگیرد. بدیهی است که مهارتِ ابرازکننده و درک‌کننده در کدگذاری و کدگشایی پیام، در رسیدن به این هدف مؤثّر است. 
+\begin{figure}
+	\center
+	\begin{tikzpicture}
+		\node[bob, minimum size =1.5cm] (bob) at (0,0) {};
+		\node[cloud, aspect = 2, draw, align=right, red] (thought) at (-2,3) {\rl{یک مفهوم}\\ \rl{احساس}\\ \rl{ایده}};
+		\draw[dotted, red] (thought.south) -- (bob.north west);
+
+		\node[rectangle, align = right, draw] (tools) at (3, 3) {\textbf{\rl{ابزارهای کدگذاری پیام}}\\ \rl{زبان‌های طبیعی}\\ \rl{زبان‌های برنامه‌نویسی}\\ \rl{شکل} \\ \rl{موسیقی}};
+		\draw[-stealth] (bob.east) -| (tools.south);
+		\node[circle, fill=blue!20, align=center] (message) at ( 6, 3) {\rl{پیام}};
+		\draw[-stealth] (tools.east) -- (message.west);
+		\node[rectangle, align=right, draw] (decode) at (10, 3) {\rl{\textbf{کدگشایی پیام}}};
+		% \draw[-stealth] (message.east) -- (decode.west);
+		\node[cloud, aspect = 2, draw, align=right, blue] (perceived) at (10, 6) {\rl{مفهوم، ایده یا احساس درک‌شده}};
+		\draw[-stealth] (decode.north)-- (perceived.south);
+		\node[bob, mirrored, minimum size = 1.5cm] (mexican) at (10, 0) {};
+		\draw[-stealth] (message.south) |- (mexican.west);
+		\draw[dotted, blue] (mexican.north east) -- (perceived.south east);
+		\draw[dashed, red, very thick] (-4.5, -1.75) node[below] {\rl{\textbf{ابرازکننده}}} rectangle (5, 8.5) ;
+		\draw[dashed, blue, very thick] (6.8, -1.75) node[below] {\rl{\textbf{درک‌کننده}}} rectangle (13.5, 8.5);
+		\draw[-stealth] (mexican.north) -- (decode.south);
+		\draw[-stealth, dotted, very thick] (thought.north) to [bend left] (perceived.north west); 
+	\end{tikzpicture}
+	\caption{انتقال پیام}
+	\label{fig:transfer}
+\end{figure}
+
+یک حالت خاصِّ این انتقال پیام، استفاده‌ی ابرازکننده از یک زبان طبیعی است. یکی از اهداف در ترجمه، این است که همان تفکّر و ایده در ذهن ابرازکننده، در ذهن درک‌کننده شکل بگیرد (شکل~\ref{fig:translate}). شاید به نظر بیاید که در ترجمه‌ی تخصصی، احساس نقش پررنگی ندارد، در حالی‌که نقش احساس در انتقال مفاهیم بسیار مهم است. ما از لحن و رفتار یک مدرّس متوجّه اهمّیّت و دشواری یک مطلب می‌شویم. اگر مطلبی در زبان مبداء این احساس را تلویحاً ابراز کند، متن ترجمه‌شده نیز باید همان کارکرد را در زبان مقصد داشته باشد. به همین علّت است که ترجمه‌ی فنّی، صرفِ جایگذاریِ واژگان با معادل تخصّصی آن‌ها نیست. (حتّی اگر معادل‌ها کاملاً حرفه‌ای انتخاب شده باشند.)
+\begin{figure}
+	\center
+	\begin{tikzpicture}
+		\node[cowboy, minimum size =1.5cm] (bob) at (0,0) {};
+		\node[cloud, aspect = 2, draw, align=right, red] (thought) at (-2,3) {\rl{یک مفهوم}\\ \rl{راهِ حلِّ یک مسئله}\\ \rl{ایده}};
+		\draw[dotted, red] (thought.south) -- (bob.north west);
+
+		\node[rectangle, align = right, draw] (tools) at (3, 3) {\rl{کدگذاری پیام با}\\ \rl{یک زبانِ طبیعی}\\ \rl{(مثل انگلیسی یا فارسی)}};
+		\draw[-stealth] (bob.east) -| (tools.south);
+		\node[circle, fill=blue!20, align=center] (message) at ( 6, 5) {\rl{پیام}};
+		\draw[-stealth] (tools.north) |- (message.west);
+		\node[rectangle, draw, align=center] (translation) at (6, 3.5) {\rl{ترجمه‌ی پیام}};
+		\draw[-stealth] (message.south) -- (translation.north);
+		\node[circle, fill=green!20, align=center] (translated) at (6, 2) {\rl{پیام}\\\rl{{\scriptsize ترجمه‌شده}}};
+		\draw[-stealth] (translation.south) -- (translated.north);
+		\node[rectangle, align=right, draw] (decode) at (10, 3) {\rl{\textbf{کدگشایی پیام}}};
+		% \draw[-stealth] (message.east) -- (decode.west);
+		\node[cloud, aspect = 2, draw, align=right, blue] (perceived) at (10, 6) {\rl{مفهوم، ایده یا احساس درک‌شده}};
+		\draw[-stealth] (decode.north)-- (perceived.south);
+		\node[mexican, mirrored, minimum size = 1.5cm] (mexican) at (10, 0) {};
+		\draw[-stealth] (translated.south) |- (mexican.west);
+		\draw[dotted, blue] (mexican.north east) -- (perceived.south east);
+		\draw[dashed, red, very thick] (-4.5, -1.75) node[below] {\rl{\textbf{ابرازکننده}}} rectangle (5, 8.5) ;
+		\draw[dashed, blue, very thick] (6.8, -1.75) node[below] {\rl{\textbf{درک‌کننده}}} rectangle (13.5, 8.5);
+		\draw[-stealth] (mexican.north) -- (decode.south);
+		\draw[-stealth, dotted, very thick] (thought.north) to [bend left] (perceived.north west); 
+	\end{tikzpicture}
+	\caption{انتقال یک پیام تخصّصی با یک زبان طبیعی}
+	\label{fig:translate}
+\end{figure}
+
+نکته‌ی دیگر، زبانِ خاصّی است که بین فعّالان یک حوزه شکل می‌گیرد. اگر یک سری انگلیسی در حوزه‌ای فعّال باشند، واژگان و زبانی که استفاده می‌کنند با انگلیسیِ عام متفاوت خواهد بود (شکل~\ref{fig:lang}). به عنوان یک متخصص کامپیوتر، باید بدانید که این تفاوت ممکن است به حدّی باشد که یک فوق لیسانس کامپیوتر در هوش مصنوعی، نتواند یک متن تخصّصی امنیّت سایبری را به درستی درک کند، چه برسد به اینکه ترجمه کند. برای ترجمه، علاوه بر اینکه باید بتواند مطلب را به درستی درک‌کند (مهارت در کدگشایی پیام)، باید به زبان تخصصی فعّالان در زبان مقصد نیز مسلّط باشد. ممکن است فارسی‌زبانانی که در آن حوزه فعّال هستند، زبان فارسیِ تخصّصیِ خود را برای ارتباط به کار بگیرند. مثال‌هایی از این موارد متفاوت در \lr{\href{https://github.com/cheraaqee/english\_for\_computing/issues}{https://github.com/cheraaqee/english\_for\_computing/issues}} خواهد آمد.
+\begin{figure}
+	\center
+	\begin{tikzpicture}
+		\foreach \x in {0.1,0.3,0.5,...,4.9}
+			\foreach \y in {0.1,0.5,0.9,...,4.8}
+				\man(\x, \y);
+		\foreach \x in {6.1,6.3,6.5,...,10.9}
+			\foreach \y in {0.1,0.5,0.9,...,4.8}
+				\man(\x, \y);
+		\draw[very thick] (0,0) rectangle (5,5);
+		\node[align=right, fill=white, draw, very thick] at (4,0.2) {\rl{\scriptsize همه‌ی انگلیسی‌زبان‌ها}};
+		\draw[very thick] (6,0) rectangle (11,5);
+		\node[align=right, fill=white, draw, very thick] at (10,0.2) {\rl{\scriptsize همه‌ی فارسی‌زبان‌ها}};
+		
+
+		\draw[blue, very thick] (0.3, 2) rectangle (4, 4.5);
+		\node[align=right, blue, fill=white, draw, very thick] at (2.5, 2.2) {\rl{\scriptsize انگلیسی‌های فعّال در صنعت چاپ}};
+		\draw[blue, very thick] (6.3, 2) rectangle (10, 4.5);
+		\node[align=right, blue, fill=white, draw, very thick] at (8.5, 2.2) {\rl{\scriptsize ایرانی‌های فعّال در صنعت چاپ}};
+		
+
+		\draw[red, very thick] (0.6, 3) rectangle (3.5, 4);
+		\node[align=right, red, fill =white, draw, very thick] at (2.2, 3.2) {\rl{\scriptsize کارشناسان \LaTeX~ِ انگلیسی}};
+		\draw[red, very thick] (6.6, 3) rectangle (9.5, 4);
+		\node[align=right, red, fill=white, draw, very thick] at (8.2, 3.2) {\rl{\scriptsize کارشناسان \LaTeX~ِ فارسی}};
+	\end{tikzpicture}
+	\caption{زبان متفاوتی که بین فعّالان یک حوزه با ملّیّت‌های مختلف شکل می‌گیرد: در اینجا، زمینه‌ی تخصّصیِ حروف‌چینی با \lr{\LaTeX} در نظر گرفته شده است. بعضی از این متخصّصین انگلیسی و برخی فارسی هستند. زبانی که آن‌ها برای انتقال مفاهیم تخصصی استفاده می‌کنند با زبان مادری‌شان متفاوت است. ترجمه‌ی یک متن تخصصی، باید این تفاوت‌ها را در نظر بگیرد. }
+	\label{fig:lang}
+\end{figure}
+\section*{چه وقت ترجمه نکنیم؟}
+مرور پیچیدگی‌های مذکور، باعث می‌شود تا بررسی کنیم که آیا ترجمه‌کردن به صرفه‌تر است، یا فراگیری زبان اصلی؟ برخی موارد که فراگیری زبان اصلی می‌تواند به‌صرفه‌تر باشد، عبارت‌اند از:
+\begin{itemize}
+	\item ترجمه‌کردن از یادگیری زبان اصلی سخت‌تر باشد
+
+		شاید هیچ‌وقت این‌طور به نظر نرسد، ولی هزینه‌های پنهان ترجمه را باید در نظر گرفت. همچنین احتمال موفقیت یک راه حل نیز باید به همراه هزینه‌های آن در نظر گرفته شود. درست است که یادگیری زبان انگلیسی، حدوداً دو سال طول می‌کشد، ولی تجربه‌ی فراوانی در این زمینه اندوخته شده است و احتمالاً اقدام به آن با موفقیت همراه می‌شود. از طرفی، کیفیّت فراگیری یک مطلب از یک منبع ترجمه شده، در موارد زیادی با یادگیری بر اساس زبان اصلی تفاوت دارد.
+	\item زبان مبداء در آن حوزه‌ی تخصصی بسیار رابج باشد
+	\item زبان مقصد معادل‌های کافی برای متناظرهای تخصّصی نداشته باشد
+\end{itemize}
+موارد فوق با دقّت خوبی در مورد زبان انگلیسی به عنوان مبداء بسیاری از زمینه‌های تخصّصی کامپیوتر و زبان فارسی به عنوان زبانِ مقصد در ترجمه، صدق می‌کنند. 
+\section*{یک مثال}
+پردازش تصویر می‌تواند به معنی استفاده از رایانه برای خودکار‌سازی استنتاج اطّلاعات از تصاویر باشد. ارزیابی کیفیّت تصویر، یک زیرشاخه از پردازش تصویر است که تلاش می‌کند قضاوت انسان در مورد کیفیّت یک تصویر را با مدل‌های محاسباتی پیش‌بینی نماید. متن زیر، مقدّمه‌ی یک پیشنهاده\footnote{«پیشنهاده» معادل پیشنهادی فرهنگستان برای «proposal» است.} در این زمینه است که معادل‌های فارسی و انگلیسیِ آن را با هم می‌بینیم.
+
+\begin{framed}
+\subsection*{تعریف مسئله}
+بینایی، منبع اصلیِ انسان برای کسب اطلاعات است \cite{cole2021motivated} و بخش قابل توجهی از فعالیت‌های مغز صرف پردازش محرّک‌های بصری می‌شود \cite{sheth2016two}. بدیهی است که با چنین شرایطی، تصاویر رقمی یکی از پرمصرف‌ترین رسانه‌های اطلاعاتی خواهند بود \cite{cisco}. اگر این رسانه با کیفیت مطلوبی برای مصرف‌کننده‌اش (که غالباً انسان است) فراهم نگردد، کاربران اطلاعات (و احساسات) مدّ نظر را دریافت نخواهند کرد \cite{mittal2013natural}. 
+
+درست است که افزایش کیفیت تصویر \cite{gonzalez2009digital} اوّلین مسئله‌ای است که به ذهن می‌رسد، ولی برای خودکارسازی این فرآیند، نیازمند معیاری هستیم، که یک اندازه‌گیری کمّی از کیفیت تصویر ارائه دهد \cite{wang2004image}. با چنین معیاری، تولیدکنندگان محتوا می‌توانند، به صورت خودکار، بر آن چه که کاربرشان تماشا می‌کند نظارت داشته باشند و الگوریتم‌های پردازش تصویر نیز می‌توانند عامل‌های مرتبط با کیفیتِ خود را بهینه کنند.
+
+در اکثر کاربردها، انسان ناظرِ غاییِ تصاویر است \cite{bosse2016deep}. لذا، قابل اطمینان‌ترین قاضی در مورد کیفیت تصویر نیز، خودِ او است. صریح‌ترین راه برای سنجش کیفیت یک تصویر، این خواهد بود که نظر انسان را در مورد آن جویا شویم \cite{ghadiyaram2015massive}. برای این منظور، تصویری را به جمعی از انسان‌ها نشان داده و از آن‌ها می‌خواهیم که وضعیت کیفیت تصویر را با نمره‌ای در بازه‌ی $[0, 100]$ تعیین نمایند -مثلاً هرچه کیفیت تصویر بهتر باشد، نمره‌ی بزرگتری انتخاب کنند. میانگین این نمرات، یک اندازه‌گیری قابل قبول از کیفیت تصویر خواهد بود و به آن «\lr{MOS}» یا «\lr{DMOS}» گفته می‌شود. این نحوه‌ی ارزیابی کیفیت تصویر، اَکْتِ «انسانی» نام دارد \cite{cheraaqee} و مواردی مثل تعداد سوژه‌ها، نحوه‌ی نمره‌دهی و شرایط نمایش تصویر، در قابل اطمینان بودنِ آن موثر است \cite{video2003final}.
+
+بدیهی است که اَکْتِ انسانی در کاربردهای برخط و برای تعداد بالای تصاویر قابل استفاده نیست. در این موارد، مدلی محاسباتی مطلوب است که بتواند قضاوت انسانی را با دقت و سرعت قابل قبول پیش‌بینی نماید. طراحی چنین مدلی، اَکْتِ «محاسباتی» نام داشته و یکی از زمینه‌های فعّال در حوزه‌ی پردازش تصویر است \cite{zhai2020perceptual}. این پیشنهاده، به یکی از حالت‌های اَکْتِ محاسباتی می‌پردازد.
+\end{framed}
+\begin{framed}
+\bibliographystyle{ieeetr-fa}
+\bibliography{ref}
+\end{framed}
+\noindent \textcolor{red}{تمرین:} قبل از دیدن معادل‌ها، سعی کنید نوشته را به انگلیسی برگردانید. سپس ترجمه‌ی خود را با آنچه در ادامه می‌آید مقایسه نمایید.
+
+\noindent \begin{tikzpicture} \draw[red, very thick] (0,0)--(0.25, 0.5)--(0.5,0)--cycle; \draw[red] (0.25, 0.35)--(0.25, 0.15); \draw[red] (0.25, 0.10) -- (0.25, 0.05); \end{tikzpicture} اگر متنی که می‌خواهید ترجمه کنید همان پیام در شکل~\ref{fig:translate} باشد، شما به عنوان مترجم باید پیام را دریافت کرده، درک کنید و سپس به زبان خود بیان کنید. به این ترتیب، ابتدا باید متن را خوانده، متوجّه شده و سپس به زبان خود بیان کنید، نه این‌که جمله به جمله، متن را به انگلیسی برگردانید.
+
+
+\begin{framed}
+\begin{latin}
+	Vision is our \emph{primary} source for gathering information [ ] and a considerable amount of brain activity is devoted to processing the visual stimuli [ ]. It will then be natural that images become one of the most popular information media [ ]. If this medium is not delivered to its users (mostly humans) with an adequate quality, the audience will not receive the intended information (or emotions) [ ].
+
+	Image quality enhancement [ ] may be the first intuitive solution for this problem, but it is also dependent on a quantitative quality criterion to be automated [ ]. Having such metric, content providers can automatically monitor what their users are watching and image processing algorithms can optimize their quality-relevant parameters.
+
+	In most application scenarios, human is the ultimate viewer of the images [ ]. Therefore, the most reliable judgment on an image's quality will be obtained by surveying human opinion [ ]. One way to do so, is to show an image to a sufficient number of observers (subjects) and ask them to rate its quality on a predefined scale (i.e. in $[0, 100]$). The average of their scores, called MOS or DMOS, is a reliable measure of image quality and this way of quantifying an image's quality is called \emph{subjective} image quality assessment (IQA) [ ]. Factors such as, number of participating subjects, scoring scale, and viewing conditions, affect the reliability of subjecive tests.
+
+	\tikz \draw[dotted] (0,0)--(15.6,0); 	
+	
+	\noindent \tikz \draw[dotted] (0,0)--(16.1,0);
+
+	\noindent \tikz \draw[dotted] (0,0)--(16.1,0);
+	
+	\noindent \tikz \draw[dotted] (0,0)--(16.1,0);
+
+	\noindent \tikz \draw[dotted] (0,0)--(16.1,0);
+
+	\noindent	\textcolor{red}{EXERCISE: } \texttt{Send me your translation of the fourth paragraph.}
+\end{latin}
+\end{framed}
+\end{document}
