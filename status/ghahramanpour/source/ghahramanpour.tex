@@ -15,11 +15,16 @@
 			exam/.style={concept color=purple!50!black,faded/.style={concept color=green!50!black!50}},
 			grow cyclic,
 			level 1/.append style={level distance=4.5cm,sibling angle=90,font=\scshape},
-			level 2/.append style={level distance=3cm,sibling angle=45,font=\scriptsize}]
+			level 2/.append style={level distance=3cm,sibling angle=45,font=\scriptsize},
+			level 3/.append style={level distance=3.2.5cm,sibling angle=15,font=\scriptsize}]
 			\node [student] {ghahramanpour}
-			child [exercise] {node{exercise\\ {\Large $\frac{?}{5}$}}}
+			child [exercise] {node{exercise\\ {\Large $\frac{?}{5}$}}
+				child{node{marbles 70\%\\reading ?\%}}
+			}
 			child [midterm] {node{midterm\\ {\Large $\frac{?}{5}$}}}
-			child [activity] {node{activity}}
+			child [activity] {node{activity}
+				child{node{class activity}}
+			}
 			child [exam] {node{exam\\ {\Large $\frac{?}{10}$}}};
 		\end{scope}
 	\end{tikzpicture}

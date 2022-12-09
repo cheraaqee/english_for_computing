@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  4 DEC 2022 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  8 DEC 2022 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,29 +508,30 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 23.
+(Font)              <14.4> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 23.
+(Font)              <7> on input line 28.
 
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./bostani.aux) ) 
 Here is how much of TeX's memory you used:
- 13485 strings out of 478293
- 292544 string characters out of 5844974
- 563860 words of memory out of 5000000
- 31455 multiletter control sequences out of 15000+600000
+ 13503 strings out of 478293
+ 292948 string characters out of 5844974
+ 569560 words of memory out of 5000000
+ 31473 multiletter control sequences out of 15000+600000
  471373 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,8n,104p,444b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,10n,104p,444b,1401s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb>
-Output written on bostani.pdf (1 page, 28193 bytes).
+s/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb>
+Output written on bostani.pdf (1 page, 40609 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
